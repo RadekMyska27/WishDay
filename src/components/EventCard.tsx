@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next'
 import { Card, Badge } from 'flowbite-react'
 import { UpcomingEvent } from '../types'
 import { formatDate, getAge } from '../utils/dateUtils'
-import { DaysLabel } from './DaysLabel'
 
 interface Props {
   event: UpcomingEvent
@@ -10,7 +9,7 @@ interface Props {
 
 export function EventCard({ event }: Props) {
   const { t, i18n } = useTranslation()
-  const { person, type, date, daysUntil } = event
+  const { person, type, date } = event
   const isBirthday = type === 'birthday'
   const age = isBirthday && person.birthday ? getAge(person.birthday, date) : null
 
@@ -29,9 +28,6 @@ export function EventCard({ event }: Props) {
         <Badge color={isBirthday ? 'blue' : 'green'} className="shrink-0">
           {isBirthday ? `🎂 ${t('event.birthday')}` : `🌸 ${t('event.nameday')}`}
         </Badge>
-      </div>
-      <div className="mt-2 text-sm">
-        <DaysLabel daysUntil={daysUntil} />
       </div>
     </Card>
   )

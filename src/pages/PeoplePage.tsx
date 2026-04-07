@@ -22,7 +22,7 @@ export function PeoplePage({ people }: Props) {
   }
 
   return (
-    <main className="mx-auto max-w-3xl px-4 py-8">
+    <main className="mx-auto w-4/5 px-4 py-8">
       <div className="mb-6">
         <h1 className="text-2xl font-bold text-gray-800">{t('people.title')}</h1>
         <p className="mt-1 text-sm text-gray-500">{t('people.subtitle')}</p>
@@ -30,24 +30,24 @@ export function PeoplePage({ people }: Props) {
 
       <Table hoverable>
         <TableHead>
-          <TableHeadCell>{t('people.name')}</TableHeadCell>
-          <TableHeadCell>{t('people.birthday')}</TableHeadCell>
-          <TableHeadCell>{t('people.age')}</TableHeadCell>
-          <TableHeadCell>{t('people.nameDay')}</TableHeadCell>
+          <TableHeadCell className="px-8">{t('people.name')}</TableHeadCell>
+          <TableHeadCell className="px-8">{t('people.birthday')}</TableHeadCell>
+          <TableHeadCell className="px-8">{t('people.age')}</TableHeadCell>
+          <TableHeadCell className="px-8">{t('people.nameDay')}</TableHeadCell>
         </TableHead>
         <TableBody className="divide-y">
           {people.map(person => (
             <TableRow key={person.id} className="bg-white">
-              <TableCell className="font-medium text-gray-800">{person.name}</TableCell>
-              <TableCell>
+              <TableCell className="px-8 font-medium text-gray-800">{person.name}</TableCell>
+              <TableCell className="px-8">
                 {person.birthday ? formatBirthday(person.birthday) : t('people.noBirthday')}
               </TableCell>
-              <TableCell>
+              <TableCell className="px-8">
                 {person.birthday
                   ? t('event.age', { count: getAge(person.birthday, new Date()) })
                   : t('people.noBirthday')}
               </TableCell>
-              <TableCell>
+              <TableCell className="px-8">
                 {person.nameDay ? formatNameDay(person.nameDay) : t('people.noNameDay')}
               </TableCell>
             </TableRow>

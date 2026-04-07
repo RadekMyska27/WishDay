@@ -5,7 +5,8 @@
       "Bash(npx create-vite@latest . --template react-ts)",
       "Bash(npm init:*)",
       "Bash(npm install:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(node -e \"const fb = require\\('flowbite-react'\\); console.log\\(Object.keys\\(fb\\).filter\\(k => k.toLowerCase\\(\\).includes\\('nav'\\)\\)\\)\")"
     ]
   }
 }
