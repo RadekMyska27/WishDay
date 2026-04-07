@@ -1,0 +1,20 @@
+{
+  "appName": "WishDay",
+  "dashboard": {
+    "title": "Upcoming events",
+    "subtitle": "Birthdays and name days in the next 30 days",
+    "todayCount": "· {{count}} today!",
+    "soonCount": "· {{count}} within 7 days"
+  },
+  "event": {
+    "birthday": "Birthday",
+    "nameday": "Name day",
+    "age_one": "{{count}} year",
+    "age_other": "{{count}} years",
+    "today": "Today!",
+    "tomorrow": "Tomorrow",
+    "inDays_one": "in {{count}} day",
+    "inDays_other": "in {{count}} days"
+  },
+  "empty": "No birthdays or name days in the next 30 days."
+}

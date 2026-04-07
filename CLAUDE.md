@@ -25,6 +25,10 @@ src/
     UpcomingEventList.tsx     — grid of EventCards
     EventCard.tsx             — single event (name, date, type badge, countdown)
     DaysLabel.tsx             — "Dnes!" / "Zítra" / "za N dní" label
+  i18n/
+    index.ts                  — i18next setup (default: en, fallback: en)
+    locales/en.json           — English translations (primary)
+    locales/cs.json           — Czech translations
   main.tsx                    — app entry point
   App.tsx                     — root: loads people, runs hooks, renders layout
   index.css                   — Tailwind + Flowbite CSS imports
@@ -63,6 +67,14 @@ npm run preview  # preview production build
 - **L** — Liskov Substitution: component variants must be interchangeable
 - **I** — Interface Segregation: keep props interfaces focused, no fat interfaces
 - **D** — Dependency Inversion: depend on abstractions (interfaces, hooks), not concrete implementations
+
+## Internationalisation
+- Primary language: **English** (`en`)
+- Czech available via language toggle in the Header (`en` ↔ `cs`)
+- Uses **react-i18next** — all UI strings must go through `t('key')`
+- Translation files: `src/i18n/locales/{en,cs}.json`
+- Czech plural forms use i18next CLDR keys: `_one`, `_few`, `_other`
+- Date locale follows `i18n.language` — pass it to `formatDate(date, i18n.language)`
 
 ## Style conventions
 - Use **flowbite-react** components wherever possible instead of raw HTML

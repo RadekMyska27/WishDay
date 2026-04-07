@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import emailjs from '@emailjs/browser'
+import i18n from '../i18n'
 import { UpcomingEvent } from '../types'
 import { EMAILJS_CONFIG, isEmailConfigured } from '../config/emailjs'
 import { formatDate } from '../utils/dateUtils'
@@ -34,7 +35,7 @@ export function useEmailNotification(events: UpcomingEvent[], notifyDaysBefore =
       const key = getNotificationKey(event)
       if (wasNotificationSent(key)) continue
 
-      const typeLabel = event.type === 'birthday' ? 'narozeniny' : 'svátek'
+      const typeLabel = i18n.t(`event.${event.type}`)
 
       emailjs
         .send(
@@ -44,7 +45,7 @@ export function useEmailNotification(events: UpcomingEvent[], notifyDaysBefore =
             to_email: EMAILJS_CONFIG.recipientEmail,
             person_name: event.person.name,
             event_type: typeLabel,
-            event_date: formatDate(event.date),
+            event_date: formatDate(event.date, i18n.language),
             days_until: event.daysUntil,
           },
           EMAILJS_CONFIG.publicKey,

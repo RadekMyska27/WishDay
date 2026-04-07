@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { UpcomingEvent } from '../types'
 import { EventCard } from './EventCard'
 
@@ -6,16 +7,14 @@ interface Props {
 }
 
 export function UpcomingEventList({ events }: Props) {
+  const { t } = useTranslation()
+
   if (events.length === 0) {
-    return (
-      <p className="text-center text-gray-400 py-12">
-        Žádné narozeniny ani svátky v následujících 30 dnech.
-      </p>
-    )
+    return <p className="py-12 text-center text-gray-400">{t('empty')}</p>
   }
 
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="flex flex-col gap-4">
       {events.map(event => (
         <EventCard key={`${event.person.id}_${event.type}`} event={event} />
       ))}

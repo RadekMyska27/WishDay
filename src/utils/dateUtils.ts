@@ -17,8 +17,11 @@ export function getDaysUntil(date: Date): number {
   return Math.round((target.getTime() - today.getTime()) / (1000 * 60 * 60 * 24))
 }
 
-export function formatDate(date: Date): string {
-  return date.toLocaleDateString('cs-CZ', { day: 'numeric', month: 'long' })
+export function formatDate(date: Date, locale = 'en'): string {
+  return date.toLocaleDateString(locale === 'cs' ? 'cs-CZ' : 'en-GB', {
+    day: 'numeric',
+    month: 'long',
+  })
 }
 
 export function getAge(birthday: string, referenceDate: Date): number {

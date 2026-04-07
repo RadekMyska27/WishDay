@@ -1,0 +1,22 @@
+{
+  "appName": "WishDay",
+  "dashboard": {
+    "title": "Nadcházející události",
+    "subtitle": "Narozeniny a svátky v příštích 30 dnech",
+    "todayCount": "· {{count}} dnes!",
+    "soonCount": "· {{count}} do 7 dní"
+  },
+  "event": {
+    "birthday": "Narozeniny",
+    "nameday": "Svátek",
+    "age_one": "{{count}} rok",
+    "age_few": "{{count}} roky",
+    "age_other": "{{count}} let",
+    "today": "Dnes!",
+    "tomorrow": "Zítra",
+    "inDays_one": "za {{count}} den",
+    "inDays_few": "za {{count}} dny",
+    "inDays_other": "za {{count}} dní"
+  },
+  "empty": "Žádné narozeniny ani svátky v následujících 30 dnech."
+}
