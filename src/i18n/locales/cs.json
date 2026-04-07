@@ -18,5 +18,19 @@
     "inDays_few": "za {{count}} dny",
     "inDays_other": "za {{count}} dní"
   },
-  "empty": "Žádné narozeniny ani svátky v následujících 30 dnech."
+  "empty": "Žádné narozeniny ani svátky v následujících 30 dnech.",
+  "nav": {
+    "dashboard": "Přehled",
+    "people": "Lidé"
+  },
+  "people": {
+    "title": "Všichni lidé",
+    "subtitle": "Všichni sledovaní v aplikaci WishDay",
+    "name": "Jméno",
+    "birthday": "Narozeniny",
+    "nameDay": "Svátek",
+    "age": "Věk",
+    "noBirthday": "—",
+    "noNameDay": "—"
+  }
 }

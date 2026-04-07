@@ -16,5 +16,19 @@
     "inDays_one": "in {{count}} day",
     "inDays_other": "in {{count}} days"
   },
-  "empty": "No birthdays or name days in the next 30 days."
+  "empty": "No birthdays or name days in the next 30 days.",
+  "nav": {
+    "dashboard": "Dashboard",
+    "people": "People"
+  },
+  "people": {
+    "title": "All people",
+    "subtitle": "Everyone tracked in WishDay",
+    "name": "Name",
+    "birthday": "Birthday",
+    "nameDay": "Name day",
+    "age": "Age",
+    "noBirthday": "—",
+    "noNameDay": "—"
+  }
 }

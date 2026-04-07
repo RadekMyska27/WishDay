@@ -19,6 +19,8 @@ src/
   hooks/
     useUpcomingEvents.ts      — filters events in next N days, sorted by date
     useEmailNotification.ts   — sends email via EmailJS, deduped via localStorage
+  pages/
+    PeoplePage.tsx            — table of all people with birthday, age, name day
   components/
     Header.tsx                — top navbar
     Dashboard.tsx             — main page, stats summary
@@ -30,7 +32,7 @@ src/
     locales/en.json           — English translations (primary)
     locales/cs.json           — Czech translations
   main.tsx                    — app entry point
-  App.tsx                     — root: loads people, runs hooks, renders layout
+  App.tsx                     — root: BrowserRouter, routes (/ and /people), hooks
   index.css                   — Tailwind + Flowbite CSS imports
   vite-env.d.ts               — Vite type declarations
 .env.example                  — EmailJS env variable template
