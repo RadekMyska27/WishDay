@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Radek Myška",
+    "birthday": "1990-04-07",
+    "nameDay": "03-04"
+  },
+  {
+    "id": "2",
+    "name": "Jana Nováková",
+    "birthday": "1985-05-10",
+    "nameDay": "05-24"
+  },
+  {
+    "id": "3",
+    "name": "Petr Svoboda",
+    "birthday": "1992-04-12",
+    "nameDay": "06-29"
+  },
+  {
+    "id": "4",
+    "name": "Marie Horáková",
+    "birthday": "1978-04-20",
+    "nameDay": "09-12"
+  }
+]
